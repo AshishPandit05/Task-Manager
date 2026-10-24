@@ -6,7 +6,13 @@ import {
   ClipboardPlus,
   Download,
   ArrowUpRight,
+  Moon,
 } from "lucide-react";
+import ProjectAnalytics from "../components/ProjectAnalytics";
+import Timer from "../components/Timer";
+import Projects from "../components/Projects";
+import TeamCollaboration from "../components/TeamCollaboration";
+import ProjectProgress from "../components/ProjectProgress";
 
 const DashboardPage = () => {
   return (
@@ -17,6 +23,9 @@ const DashboardPage = () => {
           search
         </div>
         <div className="flex flex-row gap-8 justify-between items-center">
+          <div className="justify-center items-center flex rounded-4xl h-10 cursor-pointer">
+            <Moon className="size-5" />
+          </div>
           <div className="justify-center items-center flex rounded-4xl h-10 cursor-pointer">
             <Mail className="size-5" />
           </div>
@@ -98,20 +107,11 @@ const DashboardPage = () => {
       </div>
 
       <div className="w-275 h-80 grid grid-cols-4 gap-5 grid-rows-4  justify-between  mt-5 ">
-        <div className="h-30 col-span-2 w-135 bg-white rounded-2xl p-2 flex justify-between">
-          <p className="p-1">Project Analytics</p>
-          <div className="bg-gray-300 w-90 rounded-2xl p-2">data </div>
-        </div>
-        <div className="h-30 w-65 bg-white rounded-2xl p-5"></div>
-        <div className="h-85 w-65 row-span-2  bg-white rounded-2xl p-5">
-          Projects
-        </div>
-        <div className="h-50  w-100 mt-14 bg-yellow-200 rounded-2xl p-5">
-          Team Collaboration
-        </div>
-        <div className="h-50  w-100 mt-14 ml-35  bg-red-200 rounded-2xl p-5">
-          Project Progress
-        </div>
+        <ProjectAnalytics />
+        <Timer />
+        <Projects />
+        <TeamCollaboration />
+        <ProjectProgress />
       </div>
     </div>
   );
