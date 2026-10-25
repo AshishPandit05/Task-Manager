@@ -17,7 +17,7 @@ import React from "react";
 
 import { NavLink } from "react-router";
 
-const Navbar = () => {
+const VNavbar = () => {
   return (
     <div className="h-screen w-60 flex flex-col border-gray-300 border justify-between items-start bg-white ml-3 shadow-gray-300 shadow-xl text-[16px]">
       <div className="flex pt-2 flex-col w-full  border-gray-300 border-b-3 gap-1 p-5">
@@ -99,4 +99,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default VNavbar;
